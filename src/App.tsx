@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import img1 from "Animal.png";
+//import img1 from "Animal.png";
+//<img src={img1} alt="Cool sci-fi animal" />
 
 function App(): JSX.Element {
     return (
@@ -30,7 +31,6 @@ function App(): JSX.Element {
                     </Col>
                 </Row>
             </Container>
-            <img src={img1} alt="Cool sci-fi animal" />
             <p>
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
