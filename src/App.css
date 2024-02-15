@@ -12,10 +12,22 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
+#Rectangle {
+    width: 20rem;
+    height: 10em;
+    background-color: #f60008;
+
+}
+#Rectangle1 {
+    width: 20em;
+    height: 10em;
+    background-color: #f60008;
+
+}
 
 .App-header {
     width: 100%;
-    background-color: #282c34;
+    background-color: #f8d8eb;
     min-height: 40vh;
     display: flex;
     flex-direction: column;
