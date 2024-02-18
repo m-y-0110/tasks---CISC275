@@ -1,3 +1,5 @@
+import { check } from "prettier";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -93,7 +95,15 @@ export function countShortWords(words: string[]): number {
  * then return true.
  */
 export function allRGB(colors: string[]): boolean {
-    return false;
+    if (colors.length === 0) {
+        return true;
+    }
+    const eitherRBG: boolean = colors.every(
+        (colors: string): boolean =>
+            colors === "red" || colors === "blue" || colors === "green"
+    );
+    //console.log("is " + eitherRBG);
+    return eitherRBG;
 }
 
 /**
