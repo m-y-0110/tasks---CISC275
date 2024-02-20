@@ -102,7 +102,6 @@ export function allRGB(colors: string[]): boolean {
         (colors: string): boolean =>
             colors === "red" || colors === "blue" || colors === "green"
     );
-    //console.log("is " + eitherRBG);
     return eitherRBG;
 }
 
@@ -114,7 +113,16 @@ export function allRGB(colors: string[]): boolean {
  * And the array [] would become "0=0".
  */
 export function makeMath(addends: number[]): string {
-    return "";
+    if (addends.length === 0) {
+        return "0=0";
+    }
+    const sum = addends.reduce(
+        (currentSum: number, num: number) => currentSum + num,
+        0
+    );
+    sum.toString();
+    const addendsString: string = addends.join("+");
+    return sum + "=" + addendsString;
 }
 
 /**
