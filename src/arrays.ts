@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { check } from "prettier";
-
+//ran comment to push
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -54,7 +54,7 @@ export const removeDollars = (amounts: string[]): number[] => {
             ? /* amounts.slice(1, amounts.length - 1) */ amounts.substring(1)
             : amounts
     );
-    console.log("this is " + removeSign);
+    //console.log("this is " + removeSign);
     const removeSign1: string[] = removeSign.map((removeSign: string): string =>
         removeSign[0] === "$" ? removeSign[removeSign.length - 1] : removeSign
     );
@@ -63,7 +63,10 @@ export const removeDollars = (amounts: string[]): number[] => {
         (removeSign: string): number =>
             Number.isNaN(parseInt(removeSign)) ? 0 : parseInt(removeSign)
     );
-    console.log("This is " + convertToNum);
+    //console.log("This is " + convertToNum);
+    //another comment
+
+    //nother comment
     return convertToNum;
 };
 
