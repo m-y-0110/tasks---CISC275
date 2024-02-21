@@ -140,6 +140,25 @@ export function makeMath(addends: number[]): string {
  * For instance, the array [1, 9, -5, 7] would become [1, 9, -5, 10, 7]
  * And the array [1, 9, 7] would become [1, 9, 7, 17]
  */
-export function injectPositive(values: number[]): number[] {
-    return [];
+export function injectPositive(oldValues: number[]): number[] {
+    const values = [...oldValues];
+
+    const getNegativeIndex: number = values.findIndex(
+        (value: number): boolean => value < 0
+    );
+    if (getNegativeIndex === -1) {
+        const sum = values.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        return [...values, sum];
+    } else {
+        const allNumbersBefore: number[] = values.slice(0, getNegativeIndex);
+        const sum = allNumbersBefore.reduce(
+            (currentTotal: number, num: number) => currentTotal + num,
+            0
+        );
+        values.splice(getNegativeIndex + 1, 0, sum);
+        return values;
+    }
 }
