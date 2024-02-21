@@ -58,7 +58,7 @@ export const removeDollars = (amounts: string[]): number[] => {
     const removeSign1: string[] = removeSign.map((removeSign: string): string =>
         removeSign[0] === "$" ? removeSign[removeSign.length - 1] : removeSign
     );
-    console.log(removeSign1);
+    //console.log(removeSign1);
     const convertToNum: number[] = removeSign1.map(
         (removeSign: string): number =>
             Number.isNaN(parseInt(removeSign)) ? 0 : parseInt(removeSign)
