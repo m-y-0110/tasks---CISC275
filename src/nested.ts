@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -284,8 +285,12 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number
 ): Question[] {
-    const targetIdQuestion: Question = questions.find(
+    const newList = [...questions];
+    const targetIdQuestion = questions.find(
         (question: Question): boolean => question.id === targetId
     );
+    if (targetIdQuestion === undefined) {
+        return newList;
+    }
     return duplicateList(questions, newId, targetIdQuestion);
 }
