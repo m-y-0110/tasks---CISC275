@@ -46,7 +46,7 @@ function App(): JSX.Element {
             </p>
             <img src={img1} alt="Cool sci-fi animal" />
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>

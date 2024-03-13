@@ -11,10 +11,11 @@ export function DoubleHalf(): JSX.Element {
     }
     return (
         <div>
-            <Button onClick={Doubler}>Double</Button>;
-            <Button onClick={Halver}>Halve</Button>;<div>Double Half</div>
+            <Button onClick={Doubler}>Double</Button>
+            <Button onClick={Halver}>Halve</Button>
+            <div>Double Half</div>
             <div>
-                The current value is: <span>{dhValue}</span>
+                The current value is: <div>{dhValue}</div>
             </div>
         </div>
     );
