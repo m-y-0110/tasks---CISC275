@@ -12,6 +12,11 @@ import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
+import { CheckAnswer } from "./form-components/CheckAnswer";
+import { GiveAttempts } from "./form-components/GiveAttempts";
+import { EditMode } from "./form-components/EditMode";
+import { MultipleChoiceQuestion } from "./form-components/MultipleChoiceQuestion";
+import { ChangeColor } from "./form-components/ChangeColor";
 
 function App(): JSX.Element {
     return (
@@ -19,32 +24,6 @@ function App(): JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript | Mantra Yang
             </header>
-            <h1> Adding a Header </h1>
-            <body>Hello World</body>
-            <Button onClick={() => console.log("Hello World!")}>
-                Log Hello World
-            </Button>
-            Ordered List:
-            <ol>
-                <li>Mango</li>
-                <li>Banana</li>
-                <li>Apple</li>
-            </ol>
-            <Container>
-                <Row>
-                    <Col>
-                        <div id="Rectangle"> </div>
-                    </Col>
-                    <Col>
-                        <div id="Rectangle1"> </div>
-                    </Col>
-                </Row>
-            </Container>
-            <p>
-                Edit <code>src/App.tsx</code> and save. This page will
-                automatically reload.
-            </p>
-            <img src={img1} alt="Cool sci-fi animal" />
             <hr></hr>
             <DoubleHalf></DoubleHalf>
             <hr></hr>
