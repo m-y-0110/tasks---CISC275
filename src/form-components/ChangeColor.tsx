@@ -49,7 +49,9 @@ export function ChangeColor(): JSX.Element {
                     verticalAlign: "bottom",
                     marginLeft: "5px"
                 }}
-            ></div>
+            >
+                {color1}
+            </div>
         </div>
     );
 }
